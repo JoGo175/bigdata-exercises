@@ -1,0 +1,11 @@
+
+Question 2: 
+scan 'wiki_small', {COLUMNS => ['page:page_title','author:timestamp'], FILTER => "SingleColumnValueFilter('page', 'page_title', =, 'substring:Greece') AND SingleColumnValueFilter('author', 'timestamp', =, 'substring:2019')"}
+
+Answer: 23
+
+
+Question 3:
+scan 'wiki_small', {COLUMNS => ['page:page_title','author:timestamp'], FILTER => "SingleColumnValueFilter('page', 'page_title', =, 'substring:list of') AND SingleColumnValueFilter('author', 'timestamp', =, 'substring:2020')"}
+
+Answer: List of contemporary ethnic groups,List of James Bond gadgets
