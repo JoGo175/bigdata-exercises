@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Schema title",
+    "description": "An e-commerce shopping cart",
+    "type": "object",
+    "properties": {
+        "cart": {
+            "type": "object",
+            "properties": {
+                "date_created": {
+                    "type": "string"
+                },
+                "size": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "quantity": {
+                                "type": "integer",
+                                "exclusiveMinimum": 0
+                            },
+                            "uuid": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "cost": {
+                                "type": "number",
+                                "exclusiveMinimum": 0
+                            }
+                        }
+                    },
+                    "minItems": 1
+                }
+            },
+            "required": [ "size", "date_created", "items" ]
+        }
+    },
+    "required": [ "cart" ]
+}
